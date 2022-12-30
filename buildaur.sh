@@ -14,12 +14,13 @@ while read i;
 		cd $x;
 		echo "Building Pkg";
 		paru -U --sign;
-		rm -rf src/ pkg/;
 		mv *pkg.tar.zst* ../../packges;
 		cd ..;
 		end;
-end < packges.txt
+end < ../packges.txt
 
+cd ..
+rm -rf aurpkgs/
 
 echo "###############################"
 echo "             Done              "
