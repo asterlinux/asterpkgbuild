@@ -4,14 +4,12 @@ echo "##############################"
 echo "Enter an pkg name to Download "
 echo "##############################"
 
-read input
-
-paru -G "$input"
-
-cd "$input"
-
-echo "Building Pkg "
-
-paru -U
-
+while read i;
+	echo $i;
+	paru -G $i;
+	cd $i;
+	echo "Building Pkg";
+	paru -U --sign;
+	rm -rf src/ pkg/
+	end < packges.txt
 
