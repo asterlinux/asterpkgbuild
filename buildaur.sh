@@ -4,6 +4,8 @@ echo "##############################"
 echo "       Building Pkgs          "
 echo "##############################"
 
+mkdir aurpkgs
+cd aurpkgs
 
 while read i;
 	for x in $i;
@@ -13,8 +15,7 @@ while read i;
 		echo "Building Pkg";
 		paru -U --sign;
 		rm -rf src/ pkg/;
-		mv *pkg.tar.zst* ../packges;
-		rm -rf $x;
+		mv *pkg.tar.zst* ../../packges;
 		cd ..;
 		end;
 end < packges.txt
