@@ -2,7 +2,7 @@
 
 pkgname=calamares
 pkgver=3.2.61
-pkgrel=3
+pkgrel=4
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
 license=(GPL)
@@ -10,15 +10,15 @@ url="https://github.com/calamares/calamares/releases/download"
 license=('LGPL')
 depends=('kconfig' 'kcoreaddons' 'kiconthemes' 'ki18n' 'kio' 'solid' 'yaml-cpp' 'kpmcore' 'mkinitcpio-openswap'
          'boost-libs' 'ckbcomp' 'hwinfo' 'qt5-svg' 'polkit-qt5' 'gtk-update-icon-cache' 'plasma-framework'
-         'qt5-xmlpatterns' 'squashfs-tools' 'libpwquality' 'konqueror' )
+         'qt5-xmlpatterns' 'squashfs-tools' 'libpwquality')
 makedepends=('extra-cmake-modules' 'qt5-tools' 'qt5-translations' 'git' 'boost')
 backup=('usr/share/calamares/modules/bootloader.conf'
         'usr/share/calamares/modules/displaymanager.conf'
         'usr/share/calamares/modules/initcpio.conf'
         'usr/share/calamares/modules/unpackfs.conf')
 
-source=("$pkgname-$pkgver-$pkgrel.tar.gz::$url/v$pkgver/calamares-$pkgver.tar.gz")
-sha256sums=('7591b9b60738bdba7b9de2b8da5462ab21006db06a006f0dd21ac5b832711dd2')
+source=("calamares.tar.gz")
+sha256sums=('SKIP')
 
 prepare() {
 	cd ${srcdir}/calamares-${pkgver}
@@ -37,6 +37,8 @@ prepare() {
 
 build() {
 	cd ${srcdir}/calamares-${pkgver}
+	cp -r ../data/bluesquid.svg  ${srcdir}/calamares-${pkgver}/data/images/squid.svg
+	cp -r ../data/blue-calamares.png ${srcdir}/calamares-${pkgver}/data/images/squid.png
 
 	mkdir -p build
 	cd build
