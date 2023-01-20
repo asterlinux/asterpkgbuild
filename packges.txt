@@ -1,6 +1,3 @@
-i3lock-color
-betterlockscreen
-obmenu-generator
-xfce-polkit
 ckbcomp
 plymouth-git
+
