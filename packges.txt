@@ -1,3 +1,2 @@
 ckbcomp
-plymouth-git
-
+pamac
