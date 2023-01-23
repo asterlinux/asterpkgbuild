@@ -1,2 +1,2 @@
 ckbcomp
-pamac
+pamac-all

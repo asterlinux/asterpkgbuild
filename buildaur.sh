@@ -14,7 +14,8 @@ while read i;
 		cd $x;
 		echo "Building Pkg";
 		paru -U --sign;
-		mv *pkg.tar.zst* ../../packges;
+		mv *pkg.tar.zst ../../built/;
+                mv *pkg.tar.zst.sig ../../built/;
 		cd ..;
 		end;
 end < ../packges.txt
