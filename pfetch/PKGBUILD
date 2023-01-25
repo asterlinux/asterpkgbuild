@@ -1,0 +1,19 @@
+# Maintainer: Qontinuum <qontinuum.dev@protonmail.ch>
+# Contributor: Caio Novais <caionov08 at gmail dot com>
+
+pkgname=pfetch
+pkgver=0.6.0
+pkgrel=3
+pkgdesc="A pretty system information tool written in POSIX sh."
+arch=('any')
+url="https://github.com/dylanaraps/$pkgname"
+license=('MIT')
+provides=("$pkgname")
+conflicts=('pfetch-git')
+source=("$pkgname-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz")
+b2sums=('SKIP')
+
+package() {
+  install -Dm755 "$srcdir/$pkgname-$pkgver/pfetch" "$pkgdir/usr/bin/pfetch"
+  install -Dm644 "$srcdir/$pkgname-$pkgver/LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
