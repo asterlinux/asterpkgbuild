@@ -1,2 +1,2 @@
+mkinitcpio-openswap
 ckbcomp
-pamac-all
