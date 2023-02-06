@@ -1,2 +1,4 @@
 mkinitcpio-openswap
 ckbcomp
+timeshift
+downgrade
