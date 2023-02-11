@@ -2,3 +2,4 @@ mkinitcpio-openswap
 ckbcomp
 timeshift
 downgrade
+oranchelo-icon-theme-git
