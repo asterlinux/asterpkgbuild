@@ -2,4 +2,4 @@ mkinitcpio-openswap
 ckbcomp
 timeshift
 downgrade
-cumulus
+bottles
