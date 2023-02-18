@@ -3,3 +3,5 @@ ckbcomp
 timeshift
 downgrade
 bottles
+wps-office
+ttf-wps-fonts
